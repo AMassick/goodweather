@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>[1. Get Data] GOOD Weather</title>
+	<title>[2. Dynamic Display] GOOD Weather</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +31,7 @@
 			      // Display Data Dynamically
 			      $("#current_temp").html(Math.round(json.currently.temperature)+"&#176;F");
 			      $("#current_summary").html(json.currently.summary);
- 
+ 			      $("#ozone").html(json.currently.ozone);
 			    },
 			    error: function(e) {
 			       console.log(e.message);
@@ -74,6 +74,7 @@
 		<h1 id="current_temp" class="icon" data-icon="B">65&#176;F</h1>
 		<p id="current_summary">Partly Cloudy</p>
 		<p id="location">Current Location</p> 
+		<p id="ozone">ozone</p>
 	</div>
 </div>
  
